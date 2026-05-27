@@ -2,5 +2,4 @@ requests
 matplotlib
 yfinance
 scipy
-PyQt5
 plotly
