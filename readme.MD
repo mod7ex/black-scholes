@@ -156,11 +156,13 @@ $$
 $$
 
 Call:
+
 $$
 \rho_c = K T e^{-rT} N(d_2)
 $$
 
 Put:
+
 $$
 \rho_p = -K T e^{-rT} N(-d_2)
 $$
