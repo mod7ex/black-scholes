@@ -3,13 +3,13 @@
 ## Call Option Price
 
 $$
-C = S_0 N(d_1) - K e^{-rT} N(d_2)
+C = s N(d_1) - K e^{-rt} N(d_2)
 $$
 
 ## Put Option Price
 
 $$
-P = K e^{-rT} N(d_2) - S_0 N(d_1)
+P = K e^{-rt} N(d_2) - s N(d_1)
 $$
 
 ---
@@ -17,25 +17,25 @@ $$
 # Core Quantities
 
 $$
-d_1 = \frac{\ln(S_0/K) + \left(r + \frac{1}{2}\sigma^2\right)T}{\sigma\sqrt{T}}
+d_1 = \frac{\ln(s/K) + \left(r + \frac{1}{2}\sigma^2\right)t}{\sigma\sqrt{t}}
 $$
 
 $$
-d_2 = d_1 - \sigma\sqrt{T}
+d_2 = d_1 - \sigma\sqrt{t}
 $$
 
 ---
 
 ## Definitions (Inputs)
 
-* $ S_0 $ current underlying asset price
-* $ K $ strike price
-* $ T $ time to maturity (in years)
-* $ r $ continuously compounded risk-free interest rate
-* $ \sigma $ volatility of returns (annualized standard deviation)
-* $ N(x) $ cumulative distribution function of standard normal distribution
-* $ \phi(x) $ probability density function of standard normal distribution
-* $ \ln(\cdot) $ natural logarithm
+* $s$ current underlying asset price
+* $K$ strike price
+* $t$ time to maturity (in years)
+* $r$ continuously compounded risk-free interest rate
+* $\sigma$ volatility of returns (annualized standard deviation)
+* $N(x)$ cumulative distribution function of standard normal distribution
+* $\phi(x)$ probability density function of standard normal distribution
+* $\ln(\cdot)$ natural logarithm
 
 ---
 
@@ -43,14 +43,14 @@ $$
 
 ---
 
-## Delta ($ \Delta $)
+## Delta ($\Delta$)
 
 ### Definition
 
 Sensitivity of option price to small changes in underlying price.
 
 $$
-\Delta = \frac{\partial V}{\partial S}
+\Delta = \frac{\partial V}{\partial s}
 $$
 
 Call:
@@ -65,23 +65,23 @@ $$
 
 ### Interpretation
 
-* Measures directional exposure (“shares equivalent”)
+* Measures directional exposure ("shares equivalent")
 * Positive for calls, negative for puts
 
 ---
 
-## Gamma ($ \Gamma $)
+## Gamma ($\Gamma$)
 
 ### Definition
 
 Rate of change of Delta with respect to underlying price.
 
 $$
-\Gamma = \frac{\partial^2 V}{\partial S^2}
+\Gamma = \frac{\partial^2 V}{\partial s^2}
 $$
 
 $$
-\Gamma = \frac{\phi(d_1)}{S_0 \sigma \sqrt{T}}
+\Gamma = \frac{\phi(d_1)}{s \sigma \sqrt{t}}
 $$
 
 ### Interpretation
@@ -91,7 +91,7 @@ $$
 
 ---
 
-## Vega ($nu$)
+## Vega ($\nu$)
 
 ### Definition
 
@@ -102,7 +102,7 @@ $$
 $$
 
 $$
-\nu = S_0 \phi(d_1)\sqrt{T}
+\nu = s \phi(d_1)\sqrt{t}
 $$
 
 ### Interpretation
@@ -112,40 +112,38 @@ $$
 
 ---
 
-## Theta ($ \Theta $)
+## Theta ($\Theta$)
 
 ### Definition
 
 Sensitivity of option price to time decay.
 
 $$
-\Theta = \frac{\partial V}{\partial T}
+\Theta = \frac{\partial V}{\partial t}
 $$
 
 Call:
 $$
 \Theta_c =
--\frac{S_0 \phi(d_1)\sigma}{2\sqrt{T}}
-
-* rK e^{-rT} N(d_2)
-  $$
+-\frac{s \phi(d_1)\sigma}{2\sqrt{t}}
+- rK e^{-rt} N(d_2)
+$$
 
 Put:
 $$
 \Theta_p =
--\frac{S_0 \phi(d_1)\sigma}{2\sqrt{T}}
-
-* rK e^{-rT} N(-d_2)
-  $$
+-\frac{s \phi(d_1)\sigma}{2\sqrt{t}}
++ rK e^{-rt} N(-d_2)
+$$
 
 ### Interpretation
 
-* Measures daily time decay (“theta burn”)
+* Measures daily time decay ("theta burn")
 * Usually negative for long options
 
 ---
 
-## Rho ($ \rho $)
+## Rho ($\rho$)
 
 ### Definition
 
@@ -157,12 +155,12 @@ $$
 
 Call:
 $$
-\rho_c = K T e^{-rT} N(d_2)
+\rho_c = K t e^{-rt} N(d_2)
 $$
 
 Put:
 $$
-\rho_p = -K T e^{-rT} N(-d_2)
+\rho_p = -K t e^{-rt} N(-d_2)
 $$
 
 ### Interpretation
@@ -203,7 +201,7 @@ $$
 Sensitivity of Delta to volatility (or Vega to spot).
 
 $$
-\text{Vanna} = \frac{\partial^2 V}{\partial S \partial \sigma}
+\text{Vanna} = \frac{\partial^2 V}{\partial s \partial \sigma}
 $$
 
 $$
@@ -224,13 +222,13 @@ $$
 Rate of change of Delta over time.
 
 $$
-\text{Charm} = \frac{\partial^2 V}{\partial S \partial T}
+\text{Charm} = \frac{\partial^2 V}{\partial s \partial t}
 $$
 
 Call:
 $$
 \text{Charm}_c =
--\phi(d_1)\frac{2rT - d_2 \sigma \sqrt{T}}{2T\sigma\sqrt{T}}
+-\phi(d_1)\frac{2rt - d_2 \sigma \sqrt{t}}{2t\sigma\sqrt{t}}
 $$
 
 ### Interpretation
@@ -246,18 +244,17 @@ $$
 Sensitivity of Vega to time.
 
 $$
-\text{Veta} = \frac{\partial^2 V}{\partial \sigma \partial T}
+\text{Veta} = \frac{\partial^2 V}{\partial \sigma \partial t}
 $$
 
 $$
 \text{Veta} =
-
-* S_0 \phi(d_1)\sqrt{T}
+- s \phi(d_1)\sqrt{t}
   \left(
-  r\frac{d_1}{\sigma\sqrt{T}}
-  -\frac{1 + d_1 d_2}{2T}
+  r\frac{d_1}{\sigma\sqrt{t}}
+  -\frac{1 + d_1 d_2}{2t}
   \right)
-  $$
+$$
 
 ### Interpretation
 
@@ -276,7 +273,7 @@ $$
 $$
 
 $$
-\text{Vera} = K T e^{-rT}\phi(d_2)\frac{\sqrt{T}}{\sigma}
+\text{Vera} = K t e^{-rt}\phi(d_2)\frac{\sqrt{t}}{\sigma}
 $$
 
 ### Interpretation
@@ -296,14 +293,14 @@ $$
 Rate of change of Gamma with respect to spot.
 
 $$
-\text{Speed} = \frac{\partial^3 V}{\partial S^3}
+\text{Speed} = \frac{\partial^3 V}{\partial s^3}
 $$
 
 $$
 \text{Speed} =
--\frac{\Gamma}{S_0}
+-\frac{\Gamma}{s}
 \left(
-\frac{d_1}{\sigma\sqrt{T}} + 1
+\frac{d_1}{\sigma\sqrt{t}} + 1
 \right)
 $$
 
@@ -340,7 +337,7 @@ $$
 Rate of change of Gamma over time.
 
 $$
-\text{Color} = \frac{\partial \Gamma}{\partial T}
+\text{Color} = \frac{\partial \Gamma}{\partial t}
 $$
 
 ### Interpretation
@@ -378,11 +375,11 @@ $$
 A Greek is any partial derivative of option value:
 
 $$
-V = V(S, \sigma, r, T)
+V = V(s, \sigma, r, t)
 $$
 
 $$
 \text{Greek} =
 \frac{\partial^{n+m+k+\ell} V}
-{\partial S^n \partial \sigma^m \partial r^k \partial T^\ell}
+{\partial s^n \partial \sigma^m \partial r^k \partial t^\ell}
 $$
