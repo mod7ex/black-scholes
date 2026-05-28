@@ -28,14 +28,14 @@ $$
 
 ## Definitions (Inputs)
 
-* $ S_0 $ current underlying asset price
-* $ K $ strike price
-* $ T $ time to maturity (in years)
-* $ r $ continuously compounded risk-free interest rate
-* $ \sigma $ volatility of returns (annualized standard deviation)
-* $ N(x) $ cumulative distribution function of standard normal distribution
-* $ \phi(x) $ probability density function of standard normal distribution
-* $ \ln(\cdot) $ natural logarithm
+* $S_0$ current underlying asset price
+* $K$ strike price
+* $T$ time to maturity (in years)
+* $r$ continuously compounded risk-free interest rate
+* $\sigma$ volatility of returns (annualized standard deviation)
+* $N(x)$ cumulative distribution function of standard normal distribution
+* $\phi(x)$ probability density function of standard normal distribution
+* $\ln(\cdot)$ natural logarithm
 
 ---
 
@@ -43,7 +43,7 @@ $$
 
 ---
 
-## Delta ($ \Delta $)
+## Delta ($\Delta$)
 
 ### Definition
 
@@ -70,7 +70,7 @@ $$
 
 ---
 
-## Gamma ($ \Gamma $)
+## Gamma ($\Gamma$)
 
 ### Definition
 
@@ -112,7 +112,7 @@ $$
 
 ---
 
-## Theta ($ \Theta $)
+## Theta ($\Theta$)
 
 ### Definition
 
@@ -145,7 +145,7 @@ $$
 
 ---
 
-## Rho ($ \rho $)
+## Rho ($\rho$)
 
 ### Definition
 
