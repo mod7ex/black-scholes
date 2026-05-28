@@ -28,14 +28,14 @@ $$
 
 ## Definitions (Inputs)
 
-* $S_0$ current underlying asset price
-* $K$ strike price
-* $T$ time to maturity (in years)
-* $r$ continuously compounded risk-free interest rate
-* $\sigma$ volatility of returns (annualized standard deviation)
-* $N(x)$ cumulative distribution function of standard normal distribution
-* $\phi(x)$ probability density function of standard normal distribution
-* $\ln(\cdot)$ natural logarithm
+* $ S_0 $ current underlying asset price
+* $ K $ strike price
+* $ T $ time to maturity (in years)
+* $ r $ continuously compounded risk-free interest rate
+* $ \sigma $ volatility of returns (annualized standard deviation)
+* $ N(x) $ cumulative distribution function of standard normal distribution
+* $ \phi(x) $ probability density function of standard normal distribution
+* $ \ln(\cdot) $ natural logarithm
 
 ---
 
@@ -43,7 +43,7 @@ $$
 
 ---
 
-## Delta ($\Delta$)
+## Delta ($ \Delta $)
 
 ### Definition
 
@@ -70,7 +70,7 @@ $$
 
 ---
 
-## Gamma ($\Gamma$)
+## Gamma ($ \Gamma $)
 
 ### Definition
 
@@ -112,7 +112,7 @@ $$
 
 ---
 
-## Theta ($\Theta$)
+## Theta ($ \Theta $)
 
 ### Definition
 
@@ -145,7 +145,7 @@ $$
 
 ---
 
-## Rho ($\rho$)
+## Rho ($ \rho $)
 
 ### Definition
 
@@ -156,13 +156,11 @@ $$
 $$
 
 Call:
-
 $$
 \rho_c = K T e^{-rT} N(d_2)
 $$
 
 Put:
-
 $$
 \rho_p = -K T e^{-rT} N(-d_2)
 $$
@@ -230,9 +228,9 @@ $$
 $$
 
 Call:
-
 $$
-\text{Charm}_c = -\phi(d_1)\frac{2rT - d_2 \sigma \sqrt{T}}{2T\sigma\sqrt{T}}
+\text{Charm}_c =
+-\phi(d_1)\frac{2rT - d_2 \sigma \sqrt{T}}{2T\sigma\sqrt{T}}
 $$
 
 ### Interpretation
@@ -259,7 +257,7 @@ $$
   r\frac{d_1}{\sigma\sqrt{T}}
   -\frac{1 + d_1 d_2}{2T}
   \right)
-$$
+  $$
 
 ### Interpretation
 
