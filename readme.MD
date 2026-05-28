@@ -54,11 +54,13 @@ $$
 $$
 
 Call:
+
 $$
 \Delta_c = N(d_1)
 $$
 
 Put:
+
 $$
 \Delta_p = N(d_1) - 1
 $$
