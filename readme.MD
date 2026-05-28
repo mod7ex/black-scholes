@@ -228,9 +228,9 @@ $$
 $$
 
 Call:
+
 $$
-\text{Charm}_c =
--\phi(d_1)\frac{2rT - d_2 \sigma \sqrt{T}}{2T\sigma\sqrt{T}}
+\text{Charm}_c = -\phi(d_1)\frac{2rT - d_2 \sigma \sqrt{T}}{2T\sigma\sqrt{T}}
 $$
 
 ### Interpretation
@@ -257,7 +257,7 @@ $$
   r\frac{d_1}{\sigma\sqrt{T}}
   -\frac{1 + d_1 d_2}{2T}
   \right)
-  $$
+$$
 
 ### Interpretation
 
