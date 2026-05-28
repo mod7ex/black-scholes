@@ -127,17 +127,13 @@ $$
 Call:
 
 $$
-\Theta_c =
--\frac{s \phi(d_1)\sigma}{2\sqrt{t}}
-- rK e^{-rt} N(d_2)
+\Theta_c = -\frac{s \phi(d_1)\sigma}{2\sqrt{t}} - rK e^{-rt} N(d_2)
 $$
 
 Put:
 
 $$
-\Theta_p =
--\frac{s \phi(d_1)\sigma}{2\sqrt{t}}
-+ rK e^{-rt} N(-d_2)
+\Theta_p = -\frac{s \phi(d_1)\sigma}{2\sqrt{t}} + rK e^{-rt} N(-d_2)
 $$
 
 ### Interpretation
@@ -234,8 +230,7 @@ $$
 Call:
 
 $$
-\text{Charm}_c =
--\phi(d_1)\frac{2rt - d_2 \sigma \sqrt{t}}{2t\sigma\sqrt{t}}
+\text{Charm}_c = -\phi(d_1)\frac{2rt - d_2 \sigma \sqrt{t}}{2t\sigma\sqrt{t}}
 $$
 
 ### Interpretation
@@ -255,12 +250,7 @@ $$
 $$
 
 $$
-\text{Veta} =
-- s \phi(d_1)\sqrt{t}
-  \left(
-  r\frac{d_1}{\sigma\sqrt{t}}
-  -\frac{1 + d_1 d_2}{2t}
-  \right)
+\text{Veta} = - s \phi(d_1)\sqrt{t} \left( r\frac{d_1}{\sigma\sqrt{t}} -\frac{1 + d_1 d_2}{2t} \right)
 $$
 
 ### Interpretation
@@ -304,11 +294,7 @@ $$
 $$
 
 $$
-\text{Speed} =
--\frac{\Gamma}{s}
-\left(
-\frac{d_1}{\sigma\sqrt{t}} + 1
-\right)
+\text{Speed} = -\frac{\Gamma}{s} \left( \frac{d_1}{\sigma\sqrt{t}} + 1 \right)
 $$
 
 ### Interpretation
@@ -364,11 +350,7 @@ $$
 $$
 
 $$
-\text{Ultima} =
--\frac{\nu}{\sigma^2}
-\left[
-d_1 d_2(1 - d_1 d_2) + d_1^2 + d_2^2
-\right]
+\text{Ultima} = -\frac{\nu}{\sigma^2} \left[ d_1 d_2(1 - d_1 d_2) + d_1^2 + d_2^2 \right]
 $$
 
 ### Interpretation
@@ -386,7 +368,5 @@ V = V(s, \sigma, r, t)
 $$
 
 $$
-\text{Greek} =
-\frac{\partial^{n+m+k+\ell} V}
-{\partial s^n \partial \sigma^m \partial r^k \partial t^\ell}
+\text{Greek} = \frac{\partial^{n+m+k+\ell} V} {\partial s^n \partial \sigma^m \partial r^k \partial t^\ell}
 $$
