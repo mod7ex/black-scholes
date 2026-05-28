@@ -125,6 +125,7 @@ $$
 $$
 
 Call:
+
 $$
 \Theta_c =
 -\frac{s \phi(d_1)\sigma}{2\sqrt{t}}
@@ -132,6 +133,7 @@ $$
 $$
 
 Put:
+
 $$
 \Theta_p =
 -\frac{s \phi(d_1)\sigma}{2\sqrt{t}}
@@ -156,11 +158,13 @@ $$
 $$
 
 Call:
+
 $$
 \rho_c = K t e^{-rt} N(d_2)
 $$
 
 Put:
+
 $$
 \rho_p = -K t e^{-rt} N(-d_2)
 $$
@@ -228,6 +232,7 @@ $$
 $$
 
 Call:
+
 $$
 \text{Charm}_c =
 -\phi(d_1)\frac{2rt - d_2 \sigma \sqrt{t}}{2t\sigma\sqrt{t}}
