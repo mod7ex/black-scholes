@@ -3,3 +3,5 @@ matplotlib
 yfinance
 scipy
 plotly
+flashalpha
+python-dotenv
